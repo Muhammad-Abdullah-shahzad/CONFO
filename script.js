@@ -12,10 +12,6 @@ window.addEventListener("load", () => {
      ToggleDarkAndLightModes();
   })
 });
-
-
-
-
  export function ToggleDarkAndLightModes() {
   let searchBarContainer = document.querySelector(".search");
 const backBtn=document.querySelector("#backbtn");
