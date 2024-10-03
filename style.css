@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --light-mode-color: hsl(0, 0%, 98%);
+  --dark-mode-color: hsl(207, 26%, 17%);
+  --dark-mode-elements: hsl(209, 23%, 22%);
+  --font-color: white;
+  --dark-mode-search: white;
+  --dark-mode-search-icon: black;
+}
+.dark-mode-body {
+  background-color: var(--dark-mode-color);
+  color: var(--font-color);
+  transition: all 0.5s ease-in 0s;
+}
+#dark-mode-search {
+  background-color: var(--font-color);
+  color: var(--dark-mode-search-icon);
+}
+.dark-mode-country-info {
+  color: var(--font-color);
+}
+.dark-mode-search {
+  background-color: var(--font-color);
+  color: var(--dark-mode-search-icon);
+}
+body {
+  font-family: Nunito Sans, sans-serif;
+  scroll-behavior: smooth;
+  /* background-color:var(--dark-mode-color); */
+  /* color: var(--font-color); */
+}
+#dark-mode-btn ,#dark-mode-btn2{
+  cursor: pointer;
+}
+main .dark{
+cursor: pointer;
+  
+
+}
+header {
+  padding-inline: 2rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+main {
+  padding: 0.9rem;
+}
+.search-select-container {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+select {
+  outline: none;
+  border: 1px solid #eee;
+  height: 2rem;
+  width: 8rem;
+}
+select:hover {
+  background-color: white;
+}
+.title,
+header h2 {
+  font-weight: 500;
+}
+body .countries-container {
+  width: 100vw;
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2.3em;
+}
+.country {
+  height: 20.5rem;
+  width: 14rem;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease-in 0s;
+  overflow: hidden;
+}
+.country:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 16px 0px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in 0s;
+}
+.country-img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+.country-info-container {
+  width: 100%;
+  height: 50%;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  /* background-color:var(--dark-mode-elements); */
+}
+.counties-container p {
+  width: 100%;
+  font-size: 0.9rem;
+}
+.single-card-container {
+  width: 100vw;
+  height: 27rem;
+}
+.back-btn {
+  cursor: pointer;
+  height: 2rem;
+  width: 6rem;
+  background-color: transparent;
+
+  border: 1px solid #eee;
+  margin-top: -1rem;
+  box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.1);
+  margin: 0px 0px 0.5rem 0px;
+  transition: all 0.3s ease-in 0s;
+}
+.back-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
+}
+#flag {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+}
+.card {
+  padding: 1rem;
+  border: 2px solid #eee;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.info-container {
+  /* background-color: red;   */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* line-height: 1.7rem; */
+  flex-wrap: wrap;
+  height: 9rem;
+}
+b {
+  font-weight: 500;
+}
+.apealing-font {
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  padding: 0.1rem;
+}
+.country-det {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 4rem;
+  width: 60%;
+}
+.country-det p {
+  width: max-content;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  width: max-content;
+  padding: 2px;
+  border-radius: 6px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in 0s;
+  /* background-color: var(--dark-mode-search); */
+  /* color: var(--dark-mode-search-icon); */
+}
+.search:hover {
+  box-shadow: 0px 0px 10px 0px rgba(108, 108, 128, 0.74);
+
+  border-bottom: 1.3px solid rgb(90, 93, 201);
+}
+.search input {
+  border: none;
+  outline: none;
+}
+
+/* media queries */
+@media screen and (max-width: 320px) {
+  #structure-htm {
+    font-size: 5px;
+  }
+ .single-card-container .card{
+    width: 109vw;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  header {
+    width: 115vw;
+  }
+  #structure-html:root {
+    font-size: 10.5px;
+  }
+  main .search-select-container {
+    gap: 1rem;
+  }
+  main .search-select-container .search {
+    height: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  #structure-html {
+    font-size: 7.7px;
+  }
+  body main .search-select-container .search {
+    margin-left: 10px;
+    padding: 0px;
+    font-size: 1.5rem;
+    height: 4.1rem;
+  }
+}
+/* @media  screen and (max-width:390px) {
+    html:root{
+        font-size: 14px;
+    }
+  body  .search{
+        margin-left: 10px;
+    padding: 0px;
+    font-size: 1.4rem;
+    height: 3.5rem;
+    }
+    
+} */
+
+@media screen and (max-width: 500px) {
+  html:root {
+    font-size: 8.8px;
+  }
+
+  .search-select-container {
+    justify-content: flex-start;
+    gap: 8rem;
+  }
+  .search {
+    margin-left: 10px;
+    padding: 8px;
+    font-size: 1.5rem;
+  }
+  select {
+    width: 15rem;
+    height: 4rem;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 11px;
+  }
+  .search {
+    margin-left: 10px;
+    padding: 8px;
+    font-size: 1.5rem;
+  }
+  select {
+    width: 15rem;
+    height: 4rem;
+  }
+ 
+}
+@media screen and (max-width:950px){
+    .card {
+        flex-direction: column;
+        width: 100vw;
+        height: 80vh;
+      }
+      .card #flag {
+        width: 100%;
+        height: 50%;
+      }
+      .country-det {
+        height: 50%;
+        width: 100%;
+        
+      }
+    
+      .country-det .info-container p,  .country-det p{
+        font-size: 1.2rem;
+      }
+        
+      
+      .back-btn{
+    height: 30px;
+    width: 100px;
+        font-size: 12px;
+      }
+}
+@media screen and (min-width: 1280px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  :root {
+    font-size: 17px;
+  }
+  .search {
+    font-size: 20px;
+    height: 40px;
+  }
+  .search input {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  :root {
+    font-size: 20px;
+  }
+  .search {
+    height: 100px;
+    width: 550px;
+    font-size: 49px;
+  }
+  .search input {
+    font-size: 40px;
+  }
+  select {
+    font-size: 30px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  select {
+    font-size: 35px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 3200px) {
+  :root {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 3800px) {
+  :root {
+    font-size: 45px;
+  }
+  .back-btn {
+    font-size: 50px;
+  }
+}
+/* @media  screen and (max-width:340px){
+    #structure-html:root{
+    font-size:10px;
+}
+} */
